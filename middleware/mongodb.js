@@ -1,7 +1,11 @@
 import mongoose from 'mongoose'
+import loadSchemas from '../models/loadSchemas'
 
 const connectDB = handler => async (req, res) => {
+
   if (mongoose.connections[0].readyState) {
+    loadSchemas()
+    
     // Use current db connection
     return handler(req, res)
   }
@@ -12,6 +16,9 @@ const connectDB = handler => async (req, res) => {
     useCreateIndex: true,
     useNewUrlParser: true
   })
+
+  loadSchemas()
+  
   return handler(req, res)
 }
 

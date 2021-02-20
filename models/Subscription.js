@@ -5,9 +5,15 @@ let subscriptionSchema = new Schema({
   name: {
     type: String,
     required: true,
-  }
+    unique: true,
+  },
+  domain: {
+    type: String,
+  },
+  logo: {
+    type: String,
+  },
 })
 
-let Subscription = mongoose.model('Subscription', subscriptionSchema)
 
-export default Subscription
+export default subscriptionSchema

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 let { Schema } = mongoose
-let { ObjectId } = Schema.Types
+let { String } = Schema.Types
 
 let planSchema = new Schema({
   name: {
@@ -15,7 +15,7 @@ let planSchema = new Schema({
     type: Number,
   },
   subscription_id: {
-    type: ObjectId,
+    type: String,
     required: true,
   },
 })

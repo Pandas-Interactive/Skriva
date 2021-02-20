@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 let { Schema } = mongoose
-let { ObjectId } = Schema.Types
 
 const subscriptionPlanSchema = new Schema({
   display_name: {
@@ -9,11 +8,11 @@ const subscriptionPlanSchema = new Schema({
     unique: true,
   },
   subscription_id: {
-    type: ObjectId,
+    type: String,
     required: true,
   },
   plan_id: {
-    type: ObjectId,
+    type: String,
     required: true,
   },
   billing_interval: {

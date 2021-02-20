@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import Link from 'next/link'
 import Meta from './Meta'
 import { Layout as AntLayout, Menu, Breadcrumb } from 'antd'
 
@@ -37,7 +38,9 @@ class Layout extends Component {
             <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
               <Menu.Item key="1" icon={<PieChartOutlined />}>
-                Option 1
+                <Link href="hello">
+                  Option 1
+              </Link>
               </Menu.Item>
               <Menu.Item key="2" icon={<DesktopOutlined />}>
                 Option 2

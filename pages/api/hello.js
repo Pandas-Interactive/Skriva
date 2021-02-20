@@ -1,7 +1,7 @@
 import connectDB from '../../middleware/mongodb'
 import Subscription from '../../models/Subscription'
 
-const handler = async (req, res) => {
+const handler = (req, res) => {
   if (req.method === 'POST') {
     // Handle POST request 
   } else if (req.method === 'GET') {

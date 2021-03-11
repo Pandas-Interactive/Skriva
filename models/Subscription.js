@@ -5,7 +5,6 @@ let subscriptionSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   domain: {
     type: String,

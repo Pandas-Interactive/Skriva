@@ -6,7 +6,7 @@ const handler = async (req, res) => {
 
   if (req.method === 'POST') {
     const { 
-      display_name: display_name1,
+      display_name,
       subscription_id, 
       plan_id, 
       billing_interval,
@@ -15,7 +15,7 @@ const handler = async (req, res) => {
     } = req.body;
 
     let new_subscription_plan = new SubscriptionPlan({
-      display_name: name.toLowerCase(),
+      display_name: display_name.toLowerCase(),
       subscription_id, 
       plan_id, 
       billing_interval,

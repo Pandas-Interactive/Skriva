@@ -17,7 +17,6 @@ const subscriptionPlanSchema = new Schema({
   },
   billing_interval: {
     type: Number,
-    required: true,
   },
   date_start: {
     type: Date,

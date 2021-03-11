@@ -9,7 +9,7 @@ const handler = async (req, res) => {
 
   if (req.method === 'GET') {
     // Finds a subscription by name
-    const subscription = await Subscription.findOne({ name }).exec()
+    const subscription = await Subscription.findOne({ name }).exec() 
 
     res.status(200).json({ subscription })
     

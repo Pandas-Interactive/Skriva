@@ -6,7 +6,6 @@ let planSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   annual_price: {
     type: Number,
@@ -17,6 +16,7 @@ let planSchema = new Schema({
   subscription_id: {
     type: String,
     required: true,
+    unique: true
   },
 })
 

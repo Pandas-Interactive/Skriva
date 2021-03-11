@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "antd": "^4.12.3",
+    "axios": "^0.21.1",
     "mongoose": "^5.11.16",
     "next": "10.0.7",
     "react": "17.0.1",

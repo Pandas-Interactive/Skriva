@@ -9,7 +9,7 @@ const handler = async (req, res) => {
 
   if (req.method === 'GET') {
     // Finds a plan by name
-    const plan = await Plan.findOne({ name }).exec()
+    const plan = await Plan.findOne({ subscription_id: name }).exec()  
 
     res.status(200).json({ plan })
     
@@ -21,7 +21,7 @@ const handler = async (req, res) => {
 
   } else if (req.method === 'PATCH') {
     // Finds a plan by name
-    const { name: name1, annual_price, monthly_price, subscription_id } = await Plan.findOne({ name }).exec()
+    const { name: name1, annual_price, monthly_price, subscription_id } = await Plan.findOne({ subscription_id: name }).exec()
     
     let new_plan = {
       name: new_name || name1,

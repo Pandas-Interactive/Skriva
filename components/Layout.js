@@ -36,7 +36,7 @@ class Layout extends Component {
             <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
               <Menu.Item key="1" icon={<PieChartOutlined />}>
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/">Dashboard</Link>
               </Menu.Item>
               <Menu.Item key="2" icon={<DesktopOutlined />}>
                 <Link href="/add_subscription">Add subscription</Link>
@@ -58,13 +58,6 @@ class Layout extends Component {
           <AntLayout className="site-layout">
             <Header className="site-layout-background" style={{ padding: 0 }} />
             <Content style={{ margin: "0 16px" }}>
-              {/* <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>User</Breadcrumb.Item>
-                <Breadcrumb.Item>Bill</Breadcrumb.Item>
-              </Breadcrumb>
-              <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                Bill is a cat.
-              </div> */}
               {children}
             </Content>
             <Footer style={{ textAlign: "center" }}>

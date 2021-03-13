@@ -2,7 +2,7 @@ import connectDB from '../../../middleware/mongodb'
 import mongoose from 'mongoose'
 
 const handler = async (req, res) => {
-  const { display_name } = req.query
+  const { name: display_name } = req.query
   const { 
     new_display_name,
     new_subscription_id,
@@ -16,13 +16,13 @@ const handler = async (req, res) => {
 
   if (req.method === 'GET') {
     // Finds a subscription_plan by display_name
-    const subscription_plan = await SubscriptionPlan.findOne({ display_name }).exec()
+    const subscription_plan = await SubscriptionPlan.findOne({ display_name })
 
     res.status(200).json({ subscription_plan })
     
   } else if (req.method === 'DELETE') {
     // Finds a subsciption and deletes it
-    const subscription_plan = await SubscriptionPlan.deleteOne({ display_name }).exec()
+    const subscription_plan = await SubscriptionPlan.deleteOne({ display_name })
   
     res.status(200).json({ subscription_plan })
 
